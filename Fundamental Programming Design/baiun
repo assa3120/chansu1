@@ -1,0 +1,118 @@
+Chusu:
+
+  Console.WriteLine("你的大名:");
+  String mintsu = Console.ReadLine();
+  Console.WriteLine(" ");
+
+  Console.WriteLine("男的按1,女的按0:");
+  String Shinbe = Console.ReadLine();
+  Console.WriteLine(" "); 
+
+  Console.WriteLine("出生年月日");
+  String shunroo = Console.ReadLine();
+  Console.WriteLine(" ");
+
+  Console.WriteLine("學號：");
+  String id = Console.ReadLine();
+  Console.WriteLine(" ");
+
+Tiowre:
+
+Console.WriteLine("你的大名: 卍"+mintsu+"卍");
+Console.WriteLine(" ");
+
+int k = Int32.Parse(Shinbe);
+if(k==1)
+{
+   Console.WriteLine("雄性");
+}
+if(k==0)
+{
+   Console.WriteLine("雌性");
+}
+Console.WriteLine(" ");
+
+Console.WriteLine("誕生於"+shunroo);
+Console.WriteLine(" ");
+
+Console.WriteLine("編號為"+id);
+Console.WriteLine(" ");
+Console.WriteLine("................................................................................................");
+Console.WriteLine(" ");
+
+Console.WriteLine("請確認資料是否正確");
+Console.WriteLine(" ");
+Console.WriteLine("正確的話按0");
+Console.WriteLine(" ");
+
+owamae1:
+Console.WriteLine("要改姓名請按1(卍  卍是改不掉的喔)");
+Console.WriteLine(" ");
+Console.WriteLine("要改性別請按2");
+Console.WriteLine(" ");
+Console.WriteLine("要改生日請按3");
+Console.WriteLine(" ");
+Console.WriteLine("要改學號請按4");
+
+
+
+String gai = Console.ReadLine();
+
+int g = Int32.Parse(gai);
+
+switch(g)
+
+{   
+  case 0 :
+  goto owamae;
+  
+
+  
+  case 1:
+  Console.WriteLine("再打一次你の大名:");
+  mintsu = Console.ReadLine();
+  goto Tiowre;
+
+
+
+  case 2:
+  Console.WriteLine("再在打一次你的性別，男的按1,女的按0:");
+  Shinbe = Console.ReadLine();
+  goto Tiowre;
+
+
+
+  case 3:
+  Console.WriteLine("再在打一次你的生日:");
+  shunroo = Console.ReadLine();
+  goto Tiowre;
+
+
+  case 4:
+  Console.WriteLine("再在打一次你的學號:");
+  id = Console.ReadLine();
+  goto Tiowre;
+
+
+}
+
+
+owamae:
+
+Console.WriteLine("你確定真的填好了嗎?");
+Console.WriteLine("真的確定請按1,要再改按0");
+
+String oww = Console.ReadLine();
+int o = Int32.Parse(oww);
+
+if(o==1)
+{
+   goto Owa;
+}
+if(o==0)
+{
+   goto owamae1;
+}
+
+Owa:
+Console.WriteLine("感謝你的填寫!!");
